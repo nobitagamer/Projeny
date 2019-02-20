@@ -33,11 +33,14 @@ PathVars:
     MsBuildExePath: 'C:/Windows/Microsoft.NET/Framework/v4.0.30319/msbuild.exe'
     UnityExePath: 'C:/Program Files/Unity/Editor/Unity.exe'
 
+    VisualStudioCommandLinePath: 'C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/Common7/IDE/devenv.com'
+    VisualStudioIdePath: 'C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/Common7/IDE/devenv.exe'
+
 Console:
     UseColors: False
     OutputToFilteredLog: False
 
 Compilation:
-    UseDevenv: False
+    UseDevenv: True
 
 IncludeProjenyInGeneratedSolution: False

@@ -17,6 +17,7 @@ import os
 import shlex
 import subprocess
 import shutil
+import distutils.dir_util # To overwrite files
 import stat
 import platform
 from glob import glob
@@ -270,7 +271,7 @@ class SystemHelper:
 
         self._log.debug("Copying directory '{0}' to '{1}'".format(fromPath, toPath))
 
-        shutil.copytree(fromPath, toPath)
+        distutils.dir_util.copy_tree(fromPath, toPath)
         for root, dirs, files in os.walk(toPath):
             for file in files:
                 os.chmod(os.path.join(root, file), stat.S_IWRITE)

@@ -76,7 +76,7 @@ class UnityPackageExtractor:
                     return newPackageName
             finally:
                 self._log.debug("Deleting temporary directory", tempDir)
-                shutil.rmtree(tempDir)
+                shutil.rmtree(tempDir, True)
 
     def _isSpecialFolderName(self, dirName):
         dirNameLower = dirName.lower()

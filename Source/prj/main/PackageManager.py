@@ -31,6 +31,8 @@ InstallInfoFileName = 'ProjenyInstall.yaml'
 
 from prj.main.ProjenyConstants import ProjectConfigFileName
 
+from mtm.util.pathutils import *
+
 class SourceControlTypes:
     Git = 'Git'
     Subversion = 'Subversion'
@@ -421,7 +423,7 @@ UnityPackagesPath: '{1}'
                         MiscUtil.tryKillAdbExe(self._sys)
 
                         try:
-                            shutil.rmtree(platformRootPath)
+                            shutil.rmtree(platformRootPath, onerror=onerror)
                         except:
                             self._log.error('Still unable to remove path {0}!  A running process may have one of the files locked.  Ensure you have closed down unity / visual studio / etc.'.format(platformRootPath))
                             raise

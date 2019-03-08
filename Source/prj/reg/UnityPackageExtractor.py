@@ -21,6 +21,8 @@ import os
 from mtm.util.ProcessRunner import ProcessRunner
 from mtm.util.Assert import *
 
+from mtm.util.pathutils import *
+
 class UnityPackageExtractor:
     _log = Inject('Logger')
     _sys = Inject('SystemHelper')
@@ -76,7 +78,7 @@ class UnityPackageExtractor:
                     return newPackageName
             finally:
                 self._log.debug("Deleting temporary directory", tempDir)
-                shutil.rmtree(tempDir, True)
+                shutil.rmtree(tempDir, onerror=onerror)
 
     def _isSpecialFolderName(self, dirName):
         dirNameLower = dirName.lower()

@@ -102,6 +102,6 @@ class VarManager:
         if '[' in text:
             raise Exception("Unable to find all keys in path '{0}'".format(text))
 
-        return text
+        return text.replace('\\', '/')
 
 

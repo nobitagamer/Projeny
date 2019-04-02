@@ -271,7 +271,13 @@ class SystemHelper:
 
         self._log.debug("Copying directory '{0}' to '{1}'".format(fromPath, toPath))
 
-        distutils.dir_util.copy_tree(fromPath, toPath)
+        # See https://stackoverflow.com/questions/1868714/how-do-i-copy-an-entire-directory-of-files-into-an-existing-directory-using-pyth
+        if os.path.isdir(fromPath):
+            shutil.copytree(fromPath, toPath)
+        else:
+            distutils.dir_util.copy_tree(fromPath, toPath)
+
+        self._log.debug("Making file non-readonly '{0}'".format(toPath))
         for root, dirs, files in os.walk(toPath):
             for file in files:
                 os.chmod(os.path.join(root, file), stat.S_IWRITE)

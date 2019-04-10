@@ -9,6 +9,9 @@ IF NOT %ERRORLEVEL% EQU 0 (
 )
 
 cinst -y python3 -ForceX86 --version 3.6.8
+
+choco pin add -n=python3
+
 cinst -y nsis
 call refreshenv
 

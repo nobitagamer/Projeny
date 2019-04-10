@@ -7,8 +7,8 @@
     <ProjectGuid>{463BDB34-890F-4375-A79F-37950F5457DC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>YamlDotNet</RootNamespace>
-    <AssemblyName>YamlDotNet</AssemblyName>
+    <RootNamespace>PrjYamlDotNet</RootNamespace>
+    <AssemblyName>PrjYamlDotNet</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

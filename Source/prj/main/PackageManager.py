@@ -308,7 +308,7 @@ UnityPackagesPath: '{1}'
             self._sys.copyFile('[ProjenyUnityEditorDllPath]', dllOutPath)
             self._sys.copyFile('[ProjenyUnityEditorDllMetaFilePath]', dllOutPath + '.meta')
 
-            self._sys.copyFile('[YamlDotNetDllPath]', '[PluginsDir]/Projeny/Editor/YamlDotNet.dll')
+            self._sys.copyFile('[YamlDotNetDllPath]', '[PluginsDir]/Projeny/Editor/PrjYamlDotNet.dll')
 
             self._sys.copyDirectory('[ProjenyUnityEditorAssetsDirPath]', '[PluginsDir]/Projeny/Editor/Assets')
 
